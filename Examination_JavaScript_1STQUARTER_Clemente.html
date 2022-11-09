@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <script type="text/javascript" src="js/cookie.js"></script>
+        <link rel = "stylesheet" href = "style.css"/>
+    </head>
+	<script>
+	var num = 0;
+	var cookie = document.getElementById("cookie");
+	
+	 function hideText() {
+    // hides text for 5 secs  
+    
+    const nya = document.querySelector('.hide');
+    nya.style.display = "block"
+    setTimeout(()=>{nya.style.display= "none"}, 500)
+  }
+	
+	function necoArc(){
+	    var audio = document.getElementById("audio");
+		audio.currentTime = 0.2;
+        audio.play();
+	}
+	
+	function cookieClick() { 
+		num += 1;
+
+    var numbers = document.getElementById("numbers");
+    
+    //upgrade level for printing
+    var upgradeLevel = document.getElementById("upgradeLevel");
+    
+    numbers.innerHTML = num;      
+    //automatic Granny upgrade to 2x
+    if(num == 10 ){
+		alert("Congratulations! You hit 10!");
+    }
+	   if(num == 50 ){
+		alert("Congratulations! You hit 50!");
+    }
+	   if(num == 100 ){
+		alert("Congratulations for 100! You must be bored!");
+    }
+		if(num == 200 ){
+		alert("Alrighttt,, Try for 1000,,,");
+    }
+		if(num == 1000 ){
+		alert("Jesus Christ");
+    }
+}
+	</script>
+	
+<style>
+h1 {
+	font-family:arial;
+}
+	
+div {
+	font-family:arial;
+}
+
+h3 {
+	font-family:arial;
+}
+
+#numbers {
+    margin: auto;
+    text-align:center;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    border:5px solid;
+    border-radius:10px;
+    background-color:white;
+    width:200px;
+    height:60px;    
+}
+
+</style>
+    <body>
+	<center>
+	
+	<h1>Petting Neco Arc</h1>
+        <div id = "cookie" onclick="cookieClick();necoArc();hideText()">
+            <img src="https://raw.githubusercontent.com/nicicipi/practiceWebsite/main/neco-arc-dance.gif" width="200px"/>
+			<audio id="audio" src="file:///D:/Downloads/buranya.mp3"></audio>
+        </div>
+        
+        <h3>Number of Pats:</h3>
+        
+        <div id = "numbers"></div>
+		<div class="hide" style="display:none">buranya</div>
+        <div id= "upgradeLevel"></div>
+
+    </center>
+    </body>
+</html>
